@@ -1,12 +1,11 @@
-<html lang="en">
-<head>
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
 <meta charset="UTF-8">
 <link rel="icon" href="monkeytype-lite.png">
 <title>monkeytype-lite</title>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-</head>
-<body translate="no" onload="initWords();" id="body">
+<style id="custom-cursor" type="text/css">body button, body [type='button'], body input[type='reset'], body input[type='submit'], body [role="button"], ::-webkit-search-cancel-button, ::-webkit-search-decoration, ::-webkit-scrollbar-button, ::-webkit-file-upload-button, [role^=button], .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img,  ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon, body .custom-cursor-on-hover {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA7xJREFUWEfFl0FoI2UUx3+TNJO0Tdq0SVNrS8um6KmHUihtwYtY14unvSjqgrKCoHjSi4vXPak3QRAPriIV8VRpUQ8KqwdpCz1IC3WteGirSTOTkHbSZJKZWd6QWUIxyWQW7IOcZt57v+/93/fmRaG9ZaPR6N10Or2Uz+fv1ev1m8A/Hd4P9Ehp56Uoyg/Ly8vXZ2dnOT8/Z319/Rvbtl8IlKWDU1uASCRSSKfTqaGhIZaWltjY2PhT07Qn/jcAVVWLqVQqKQnn5+fZ2dn5+/T09NqVAMzMzHB4eHh1AJlMhpOTk6sDkD7Qdf3qAKLRKIZhXB2AoiiYppnTdf3nTCZzvVwuH1UqlbeAX4F+wAGqQRq07TVsvQUS2DAMVlZWmJiYoF6vs7m5qRWLxW+npqZedxzHPj4+/hC43SuEBzAHPAXsAb9IkMsAFxcXjI6OUq1WyWaznJ2dub/FxUX6+/vZ3t5mb2/vTjwevxGLxUYKhcKXwHuA1QlKAF4BPgfConWtVrsDvH8ZoFgsMjIy8jCW4zhuJcRnbk74kVnB6uoqAwMD7O/vs7W19QbwaTeAv4Br8XicRCIh3d6o1WoTqqre9waRBNB13a2AZ3L6WCxGJBIhFAohI3t3dxeJIxWanp5mbW1NDvZaN4AckBkeHnbJpdSlUumWqqof+QWQBOFwmHK5zODgoJtvYWFBxrcvgDXgRXGU+27bNrlc7ntVVZdbAS5L0FoBSVir1Wg0Gg8BJicnRRJfAM8D36mqSiqVcul1Xa9LZ6dSqWi78nUDkMMcHBz4ApAkIsPw+Pi4q2elUnGl8ID8XK3LFRBJjo6OfAFI/C+Am0ItUogMUvJeACzLcv2kKcWaUvoGcGUQ53Q67QaQJUQ6Oqj1CiAy/Askx8bG6OvrQ04kZQxqvQJIns+AWzILHuXkHnAQgOcAuX49ad+uQkEApHtEhlHvNgQtf5Am9HK5MnhT8VEApIfy+fwnwJvdRnHr82eBH1tvQ1CI5kh/FbjbC4C0vfz5GJMZIP0Q1DRNuzBN83Gg1AuAvPsB8K5cRZkJsg31aqZpomnax8Db3Xz/K3oC+B2Y8T5Q3YK0PpfuLxQKJ5ZlyZJQ7Obb7ngLwE/yfUgmk+7G48eaI7ximuYzwG9+fDrVdxFYBx6TTUiWj04m21GpVDptNBo3msuqn/x0EzgDyLL5ciKRCIkkrT3hrWWGYdjVavVr4J3mLPGVXF7qBuAFygIvKYrydDgcfjIUCsVt2zYsy/rDcZx7wFfAfd9ZW158AIplsTBvTv6EAAAAAElFTkSuQmCC") 8 2, pointer !important;} html,body,body select,body .custom-cursor-default-hover {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAA8xJREFUWEe9l0toK2UUx38zSdNHmtTaJm3dVCultl0orkShILrThSDCBVfiUi74uPhAXfhAEBHk+sD3ShTxiboSEUQuiq0tlD6wvaRKaly0aaammTaZNCP/kMDcmEzSNPceKDQz33fO/zvn//3PGQP43jTNG0ul0vPAO0CRK2iGaZqZsbGxq0qlEru7u384jvM48M2VwmAAX8VisXuCwSCRSISjoyOSyeRPrus+Bvx+uYEIwNloNHo+HA6XYwUCAYaGhtjZ2XFTqdTHwNPAX5cLiADMhkKhFQX1Wn9/PwMDAyQSiaO9vb3zwEvAfqeBCID+/onH4yM6fa2Njo6Ws7K+vr6by+WeqxDV6RQQBZd9EolEzujU9UwAxsfHOTg4YG1tbcNxnCeArzsBogrgwWAw+H4sFvP1KZ4ISDKZZHNz82fXdc8Bv50GSBXA9cDF4eFhurq6mvqLx+OoNKurq+729vanwFPAn0031llQBaBXW+Fw+NpoNNqSH9M0mZiYoLu7m6WlpXw6nX4dePGkRPUC+DAQCDygMhiG97E/nt7eXqampshmswKSzuVyUtS3gUIrJ/FGuh/4SNcxFAq1sveSNSrf5OQkW1tbrKysbDqOo7J8Cbh+zrwArgH+7uvrK9//dqxaFvFjeXmZjY2NCxWi/trIX22u1w3DuGFkZOREZah1rrLMzMyUCT0/Py+ifgY8KZ7Vrq0F8Abw0ODgID09Pe0k4ZI9ysT09DTpdJqFhYWCh6hWdWEtgHuBzxVcIDphysLs7Cy6uolEgsXFRRH1Fl17+a8FcDWwYxiGqQ2qaSdMt2pubg7btpUJUqnUHcCP9QDo2RJwk4goQp7WXNfl8PBQnCpalqU5481q8EYAXgHO6SrWdsiTgCkWi+UT27adcl33XeA9INWMhHp/F/Cd/lEZ6nVIPyCO40iU3Hw+rxS/VZmuGo559SRPLTEDBCXL1UGl2ek10kkNbdu+ADwMLDTb06gEei4nt4rBUrhmVigUsCzr3+PjY41xHzRTP6+/RqL/AvCMFqo3aF5sZJoRstmslO5MO6NbIwC3V5mqQbXeoCJ27+/vi+Ei2NlWm08rJNQayaB40KPT1w4qCm5ZliboZystuFmVGr7367s/ABKM/5Uhk8kouLT95bYjVzb6AdA4rgGj/L2gMnjSrp6htJ/a/ABIr38pXxXDKIOQsBSLRX2s3AbkTx29Ti/w+hT195QAz0N9F9wMJDoR3E8Hqv6/Be6u/NBkcx/wRaeCtwLgUeDVSsDXgEc6GbwVANdVJHUVuLPdu+4H+j9C4UcwccL8kQAAAABJRU5ErkJggg==") 1 1, auto !important;}</style></head>
+<body translate="no" onload="initWords();" id="body" style="cursor: default;">
   <div id="commandLineWrapper" class="hidden">
   <div id="commandLine">
     <input type="text" class="input" placeholder="Command">
@@ -35,11 +34,11 @@
     </div>
   </div>
 </div>
-<div class="outOfFocusWarning" id="fw">
+<div class="outOfFocusWarning" id="fw" style="opacity: 1;">
   <i class="fas fa-mouse-pointer"></i>
   Click the words below to focus
 </div>
-<div id="centerContent">
+<div id="centerContent" style="opacity: 1; filter: blur(2.5px); transition: all 0.5s ease 0s;">
   
   <div id="middle">
     <div id="top">
@@ -87,18 +86,18 @@
         </div>
         <div class="group wordCount">
           <div class="buttons">
-            <div class="button" wordCount="10">10</div>
-            <div class="button active" wordCount="25">25</div>
-            <div class="button" wordCount="50">50</div>
-            <div class="button" wordCount="100">100</div>
+            <div class="button" wordcount="10">10</div>
+            <div class="button active" wordcount="25">25</div>
+            <div class="button" wordcount="50">50</div>
+            <div class="button" wordcount="100">100</div>
           </div>
         </div>
         <div class="group time hidden">
           <div class="buttons">
-            <div class="button" timeConfig="15">15</div>
-            <div class="button active" timeConfig="30">30</div>
-            <div class="button" timeConfig="60">60</div>
-            <div class="button" timeConfig="120">120</div>
+            <div class="button" timeconfig="15">15</div>
+            <div class="button active" timeconfig="30">30</div>
+            <div class="button" timeconfig="60">60</div>
+            <div class="button" timeconfig="120">120</div>
           </div>
         </div>
         <div class="group customText hidden">
@@ -108,19 +107,19 @@
         </div>
       </div>
     </div>
-    <div id="caret" class="hidden"></div>
+    <div id="caret" class="hidden" style="top: 303.141px; left: 4px; animation-name: caretFlash;"></div>
     <div id="liveWpm"></div>
-    <div id="words"></div>
+    <div id="words"><div class="word active"><letter>m</letter><letter>e</letter><letter>d</letter><letter>i</letter><letter>e</letter><letter>v</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>r</letter><letter>e</letter><letter>s</letter><letter>p</letter><letter>e</letter><letter>c</letter><letter>t</letter></div><div class="word"><letter>m</letter><letter>o</letter><letter>t</letter><letter>h</letter><letter>e</letter><letter>r</letter></div><div class="word"><letter>r</letter><letter>e</letter><letter>s</letter><letter>i</letter><letter>d</letter><letter>u</letter><letter>e</letter></div><div class="word"><letter>i</letter><letter>n</letter><letter>s</letter><letter>t</letter><letter>a</letter><letter>l</letter><letter>l</letter></div><div class="word"><letter>n</letter><letter>o</letter><letter>r</letter><letter>m</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>r</letter><letter>e</letter><letter>f</letter><letter>l</letter><letter>e</letter><letter>c</letter><letter>t</letter></div><div class="word"><letter>b</letter><letter>l</letter><letter>a</letter><letter>d</letter><letter>e</letter></div><div class="word"><letter>s</letter><letter>o</letter><letter>m</letter><letter>e</letter><letter>w</letter><letter>h</letter><letter>e</letter><letter>r</letter><letter>e</letter></div><div class="word"><letter>s</letter><letter>h</letter><letter>r</letter><letter>u</letter><letter>g</letter></div><div class="word"><letter>p</letter><letter>a</letter><letter>r</letter><letter>t</letter><letter>i</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>c</letter><letter>r</letter><letter>i</letter><letter>m</letter><letter>i</letter><letter>n</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>o</letter><letter>p</letter><letter>e</letter><letter>r</letter><letter>a</letter></div><div class="word"><letter>m</letter><letter>e</letter><letter>m</letter><letter>o</letter><letter>r</letter><letter>y</letter></div><div class="word"><letter>c</letter><letter>o</letter><letter>n</letter><letter>t</letter><letter>e</letter><letter>m</letter><letter>p</letter><letter>t</letter></div><div class="word"><letter>p</letter><letter>a</letter><letter>r</letter><letter>t</letter><letter>n</letter><letter>e</letter><letter>r</letter><letter>s</letter><letter>h</letter><letter>i</letter><letter>p</letter></div><div class="word"><letter>u</letter><letter>n</letter><letter>a</letter><letter>b</letter><letter>l</letter><letter>e</letter></div><div class="word"><letter>j</letter><letter>o</letter><letter>y</letter></div><div class="word"><letter>b</letter><letter>l</letter><letter>a</letter><letter>c</letter><letter>k</letter></div><div class="word"><letter>p</letter><letter>o</letter><letter>o</letter><letter>l</letter></div><div class="word"><letter>a</letter><letter>w</letter><letter>a</letter><letter>i</letter><letter>t</letter></div><div class="word"><letter>p</letter><letter>r</letter><letter>e</letter><letter>s</letter><letter>i</letter><letter>d</letter><letter>e</letter><letter>n</letter><letter>t</letter><letter>i</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>l</letter><letter>a</letter><letter>n</letter><letter>e</letter></div><div class="word"><letter>d</letter><letter>i</letter><letter>s</letter><letter>a</letter><letter>p</letter><letter>p</letter><letter>o</letter><letter>i</letter><letter>n</letter><letter>t</letter><letter>i</letter><letter>n</letter><letter>g</letter></div><div class="word"><letter>c</letter><letter>r</letter><letter>i</letter><letter>t</letter><letter>e</letter><letter>r</letter><letter>i</letter><letter>o</letter><letter>n</letter></div><div class="word"><letter>i</letter><letter>n</letter><letter>s</letter><letter>t</letter><letter>a</letter><letter>n</letter><letter>t</letter><letter>l</letter><letter>y</letter></div><div class="word"><letter>p</letter><letter>o</letter><letter>r</letter><letter>t</letter><letter>f</letter><letter>o</letter><letter>l</letter><letter>i</letter><letter>o</letter></div><div class="word"><letter>c</letter><letter>a</letter><letter>l</letter><letter>c</letter><letter>u</letter><letter>l</letter><letter>a</letter><letter>t</letter><letter>e</letter></div><div class="word"><letter>s</letter><letter>n</letter><letter>a</letter><letter>k</letter><letter>e</letter></div><div class="word"><letter>a</letter><letter>g</letter><letter>r</letter><letter>i</letter><letter>c</letter><letter>u</letter><letter>l</letter><letter>t</letter><letter>u</letter><letter>r</letter><letter>e</letter></div><div class="word"><letter>d</letter><letter>i</letter><letter>s</letter><letter>p</letter><letter>l</letter><letter>a</letter><letter>y</letter></div><div class="word"><letter>l</letter><letter>o</letter><letter>u</letter><letter>d</letter><letter>l</letter><letter>y</letter></div><div class="word"><letter>s</letter><letter>a</letter><letter>t</letter><letter>i</letter><letter>s</letter><letter>f</letter><letter>i</letter><letter>e</letter><letter>d</letter></div><div class="word"><letter>m</letter><letter>a</letter><letter>y</letter><letter>o</letter><letter>r</letter></div><div class="word"><letter>a</letter><letter>s</letter><letter>s</letter><letter>e</letter><letter>m</letter><letter>b</letter><letter>l</letter><letter>y</letter></div><div class="word"><letter>d</letter><letter>i</letter><letter>s</letter><letter>l</letter><letter>i</letter><letter>k</letter><letter>e</letter></div><div class="word"><letter>r</letter><letter>e</letter><letter>q</letter><letter>u</letter><letter>i</letter><letter>r</letter><letter>e</letter><letter>m</letter><letter>e</letter><letter>n</letter><letter>t</letter></div><div class="word"><letter>d</letter><letter>i</letter><letter>s</letter><letter>m</letter><letter>i</letter><letter>s</letter><letter>s</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>c</letter><letter>r</letter><letter>a</letter><letter>s</letter><letter>h</letter></div><div class="word"><letter>s</letter><letter>o</letter><letter>u</letter><letter>p</letter></div><div class="word"><letter>d</letter><letter>i</letter><letter>s</letter><letter>l</letter><letter>i</letter><letter>k</letter><letter>e</letter></div><div class="word"><letter>m</letter><letter>e</letter><letter>c</letter><letter>h</letter><letter>a</letter><letter>n</letter><letter>i</letter><letter>c</letter><letter>a</letter><letter>l</letter></div><div class="word"><letter>e</letter><letter>v</letter><letter>o</letter><letter>k</letter><letter>e</letter></div><div class="word"><letter>l</letter><letter>o</letter><letter>o</letter><letter>s</letter><letter>e</letter></div><div class="word"><letter>p</letter><letter>r</letter><letter>o</letter><letter>m</letter><letter>i</letter><letter>n</letter><letter>e</letter><letter>n</letter><letter>t</letter></div><div class="word"><letter>n</letter><letter>e</letter><letter>t</letter><letter>w</letter><letter>o</letter><letter>r</letter><letter>k</letter></div><div class="word"><letter>b</letter><letter>l</letter><letter>e</letter><letter>e</letter><letter>d</letter></div><div class="word"><letter>t</letter><letter>i</letter><letter>g</letter><letter>h</letter><letter>t</letter></div><div class="word"><letter>o</letter><letter>p</letter><letter>p</letter><letter>o</letter><letter>s</letter><letter>i</letter><letter>t</letter><letter>e</letter></div><div class="word"><letter>o</letter><letter>b</letter><letter>v</letter><letter>i</letter><letter>o</letter><letter>u</letter><letter>s</letter><letter>l</letter><letter>y</letter></div></div>
   </div>
-  <focus-trap><input id="wordsInput" class="" tabindex="-1" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"></focus-trap>
+  <focus-trap tabindex="0"><input id="wordsInput" class="" tabindex="-1" type="text" autocomplete="off" autocapitalize="off" autocorrect="off"></focus-trap>
   <div id="restartTestButton" tabindex="0"><i class="fas fa-redo-alt"></i></div>
   <p style="text-align:center;">Click the button above or press tab to restart.</p>
 </div>
 
-</div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script src="words.js"></script>
 <script src="main.js"></script>
-</body>
-</html>
+
+</body></html>
